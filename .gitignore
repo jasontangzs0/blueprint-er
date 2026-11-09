@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.pytest_cache/
+# full call logs: distributed as a release asset, not in the repository
+release_assets/
+# outputs of new runs
+data/reper/
+data/baselines/
+data/cands/

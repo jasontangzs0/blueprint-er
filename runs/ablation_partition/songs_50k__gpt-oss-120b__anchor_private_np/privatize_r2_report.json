@@ -1,0 +1,18 @@
+{
+ "round": 2,
+ "model": "gpt-oss-120b",
+ "calls": 209,
+ "in_tokens": 156911,
+ "out_tokens": 165421,
+ "count_mismatch": 45,
+ "call_failures": 3,
+ "leak_retries": 53,
+ "dropped_pairs": 0,
+ "forced_pairs": 3,
+ "pairs_in": 152,
+ "pairs_out": 152,
+ "forced_records": 1,
+ "dropped_records": 0,
+ "records_in": 200,
+ "records_out": 200
+}

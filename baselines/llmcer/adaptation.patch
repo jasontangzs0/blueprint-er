@@ -1,0 +1,68 @@
+diff --git a/llmcer/llm_interaction.py b/llmcer/llm_interaction.py
+index 68f6e9f..edda7a0 100644
+--- a/llmcer/llm_interaction.py
++++ b/llmcer/llm_interaction.py
+@@ -13,22 +13,42 @@ from llmcer.utils import UnionFind, pick_elements
+ from llmcer.similarity import get_most_simi, is_act
+ from llmcer.clustering import mdg_check, find_misclustered_records
+ 
++import os as _os
++# Per-request timeout (seconds) and retries: the library default of 600 s let a stalled closed-model call
++# hang a shard for hours (2026-10-18). Our runs set LLMCER_TIMEOUT=120; a timed-out call falls into the
++# except branch of _create_no_thinking below and is answered "no clusters", like a content-filter 400.
++_TIMEOUT = float(_os.getenv("LLMCER_TIMEOUT", "600")); _RETRIES = int(_os.getenv("LLMCER_MAX_RETRIES", "2"))
+ if OPENAI_BASE_URL:
+-    client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL)
++    client = OpenAI(api_key=OPENAI_API_KEY, base_url=OPENAI_BASE_URL, timeout=_TIMEOUT, max_retries=_RETRIES)
+ else:
+-    client = OpenAI(api_key=OPENAI_API_KEY)
++    client = OpenAI(api_key=OPENAI_API_KEY, timeout=_TIMEOUT, max_retries=_RETRIES)
+ 
+ _orig_create = client.chat.completions.create
+ 
+ # reasoning_effort is only accepted by reasoning models (gpt-5 / o-series);
+ # gpt-4o-mini and other chat models reject it with HTTP 400. Only inject it for
+ # models that actually support it.
+-_REASONING_MODEL_PREFIXES = ('gpt-5', 'o1', 'o3', 'o4')
++_REASONING_MODEL_PREFIXES = ('gpt-5', 'gpt-oss', 'o1', 'o3', 'o4')   # gpt-oss: reasoning_effort supported, temperature rejected
++import os as _os
++_EFFORT = _os.getenv("LLMCER_REASONING_EFFORT", "none")   # our runs: 'low' (same setting as REP-ER)
++_CALL_LOG = _os.getenv("LLMCER_CALL_LOG", "") == "1"
+ def _create_no_thinking(**kwargs):
+     if ('reasoning_effort' not in kwargs
+             and OPENAI_MODEL.lower().startswith(_REASONING_MODEL_PREFIXES)):
+-        kwargs['reasoning_effort'] = 'none'
+-    return _orig_create(**kwargs)
++        kwargs['reasoning_effort'] = _EFFORT
++    if OPENAI_MODEL.lower().startswith(_REASONING_MODEL_PREFIXES):
++        kwargs.pop('temperature', None)                 # reasoning deployments reject temperature
++    _t0 = time.time()
++    try:
++        _r = _orig_create(**kwargs)
++        if _CALL_LOG:                                   # LLMCER_CALL_LOG=1: one line per call (diagnosing stalls, 2026-10-18)
++            _u = getattr(_r, "usage", None)
++            print(f"    [LLM] ok {time.time()-_t0:.1f}s in={getattr(_u,'prompt_tokens',0)} out={getattr(_u,'completion_tokens',0)}", flush=True)
++        return _r
++    except Exception as _e:                             # content-filter 400s etc.: answer "no clusters / No" instead of dying
++        print(f"    [LLM] call failed after {time.time()-_t0:.1f}s, treated as empty answer: {type(_e).__name__}: {str(_e)[:90]}", flush=True)
++        from types import SimpleNamespace as _NS
++        return _NS(choices=[_NS(message=_NS(content="[]"))], usage=_NS(total_tokens=0, prompt_tokens=0, completion_tokens=0))
+ 
+ client.chat.completions.create = _create_no_thinking
+ 
+diff --git a/llmcer/vectorization.py b/llmcer/vectorization.py
+index 722133c..5e2ea50 100644
+--- a/llmcer/vectorization.py
++++ b/llmcer/vectorization.py
+@@ -27,7 +27,9 @@ def cal_total_simi_vector(data_file_path, model_file=EMBEDDING_MODEL):
+         return ' '.join(str(value) for value in row)
+         
+     data['combined_text'] = data.apply(combine_attributes, axis=1)
+-    vectors = data['combined_text'].apply(lambda text: model.encode(text)).tolist() 
+-    simi_matrix = cosine_similarity(vectors)
++    import numpy as np
++    # batch encoding + float32 similarity (a 50K x 50K float64 matrix would need 20 GB)
++    vectors = list(model.encode(data['combined_text'].tolist(), batch_size=256, show_progress_bar=False).astype(np.float32))
++    simi_matrix = cosine_similarity(np.array(vectors, dtype=np.float32)).astype(np.float32)
+     print("calculate similarity matrix done")
+     return vectors, simi_matrix, data

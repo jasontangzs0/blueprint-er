@@ -1,0 +1,20 @@
+[10s] cit_51k: 51,301 records, fields ['title', 'authors', 'journal', 'year'], bm25 on ['title', 'authors', 'journal', 'year'] (char3, k=10), 45,000 entities, 9,969 true pairs
+[66s] round-0 BM25: 513,010 neighbour edges; 1,852 records without a mutual neighbour get no block (gate=mutual)
+[66s]   [round-0 blocks] blocks 49,449 (largest 60), reach 9,969/9,969 = 1.000, candidate pairs 7,134,092, calls/record 0.96
+[66s] identity cards: data/reper/cards/cit_51k__cards_private_np.py (2 kinds); record kinds: {'publication': 51301}
+[66s] round 1: 49,449 calls on gpt-5-nano (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[67s]   vote: 9,119 asserted pairs, 9,119 accepted, 0 rejected by contrary verdicts
+[67s] round 1 done: 49,449 calls, 7 parse failures, {} -> 45,058 clusters
+[88s]   [after round 1] P 0.947 R 0.910 F1 0.928 | asserted 9,584 TP 9,076 FP 508 FN 893 | clusters 45,058 | ACC 0.988 FP 0.994
+[88s] spend so far: list $12.50 / billed $12.49
+[218s] round-2 keys (gpt-5.6-sol): ['exact_normalized_fields', 'lexical_cross_field', 'character_minhash', 'phonetic_authors_and_sparse'] | evidence strata {'title+authors+year': 336, 'authors+year': 1076, 'authors+journal+year': 452, 'journal+year': 408, 'year': 1007, 'title+journal+year': 165, 'title+authors+journal+year': 217, 'journal': 29, 'title+year': 212, 'title+authors+journal': 22, 'title': 27, 'title+authors': 82, 'authors': 50, 'authors+journal': 21, 'title+journal': 13}
+[338s]   units 45,058 (4,205 with copies); key candidates: 71,706 key values held by <= 5000 units, 87,095,303 unit pairs before the rank cut
+[339s]   [round-2 entity-round lists (k=59)] blocks 45,057 (largest 109), reach 9,969/9,969 = 1.000, candidate pairs 103,790,183, calls/record 0.88
+[339s] round 2 (entity round): 45,057 calls on gpt-5-nano
+[339s]   --no-calls: 1 of 45,057 blocks have no logged call; skipped
+[339s]   acceptance rule (shared key value held by <= 50 units): 7 selections dropped
+[339s]   vote: 412 asserted pairs, 412 accepted, 0 rejected by contrary verdicts
+[339s] round 2 (entity round) done: 45,056 calls, 3 parse failures, {} -> 44,678 clusters
+[351s]   [after round 2, entity round] P 0.922 R 0.965 F1 0.943 | asserted 10,434 TP 9,617 FP 817 FN 352 | clusters 44,678 | ACC 0.989 FP 0.994
+[351s] spend so far: list $27.92 / billed $27.91
+[351s] spend: gpt-5-nano: 94,505 calls, 217,317,667 in (0% cached) / 42,628,749 out -> list $27.92 / billed $27.91 | resolve calls/record 1.84

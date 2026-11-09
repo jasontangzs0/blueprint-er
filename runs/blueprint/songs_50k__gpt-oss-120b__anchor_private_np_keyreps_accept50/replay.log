@@ -1,0 +1,20 @@
+[7s] songs_50k: 50,000 records, fields ['title', 'release', 'artist_name', 'duration', 'year'], bm25 on ['title', 'artist_name'] (word, k=10), 45,843 entities, 7,087 true pairs
+[12s] round-0 BM25: 484,481 neighbour edges; 907 records without a mutual neighbour get no block (gate=mutual)
+[12s]   [round-0 blocks] blocks 49,093 (largest 60), reach 7,082/7,087 = 0.999, candidate pairs 5,369,240, calls/record 0.98
+[12s] identity cards: data/reper/cards/songs_50k__cards_private_np.py (2 kinds); record kinds: {'song': 50000}
+[12s] round 1: 49,093 calls on gpt-oss-120b (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[12s]   --no-calls: 2 of 49,093 blocks have no logged call; skipped
+[12s]   vote: 7,238 asserted pairs, 7,238 accepted, 0 rejected by contrary verdicts
+[12s] round 1 done: 49,091 calls, 23 parse failures, {} -> 45,727 clusters
+[24s]   [after round 1] P 0.968 R 0.989 F1 0.979 | asserted 7,242 TP 7,012 FP 230 FN 75 | clusters 45,727 | ACC 0.996 FP 0.998
+[24s] spend so far: list $11.97 / billed $11.97
+[80s] round-2 keys (gpt-5.6-sol): ['exact_title_variants', 'title_token_anchors', 'fuzzy_title_word_signatures', 'artist_aliases'] | evidence strata {'duration': 515, 'release+duration': 1940, 'title+duration': 36, 'title+release+duration+year': 72, 'release+artist_name+duration': 129, 'title+release+duration': 37, 'release+duration+year': 137, 'artist_name+duration': 8, 'release+artist_name+duration+year': 15, 'release': 32, 'release+year': 3, 'duration+year': 6, 'title+release+artist_name+duration+year': 11, 'artist_name': 1, 'title+release+artist_name+duration': 8, 'title+duration+year': 3, 'release+artist_name': 1, 'title+artist_name+duration': 1, 'title+year': 1}
+[83s]   units 45,727 (2,997 with copies); key candidates: 34,467 key values held by <= 5000 units, 892,945 unit pairs before the rank cut
+[83s]   [round-2 entity-round lists (k=59)] blocks 42,534 (largest 102), reach 6,586/7,087 = 0.929, candidate pairs 28,617,758, calls/record 0.85
+[83s] round 2 (entity round): 42,534 calls on gpt-oss-120b
+[83s]   acceptance rule (shared key value held by <= 50 units): 1 selections dropped
+[83s]   vote: 79 asserted pairs, 79 accepted, 0 rejected by contrary verdicts
+[83s] round 2 (entity round) done: 42,534 calls, 4 parse failures, {} -> 45,651 clusters
+[96s]   [after round 2, entity round] P 0.958 R 0.993 F1 0.975 | asserted 7,350 TP 7,040 FP 310 FN 47 | clusters 45,651 | ACC 0.995 FP 0.997
+[96s] spend so far: list $24.31 / billed $24.31
+[96s] spend: gpt-oss-120b: 91,625 calls, 120,103,797 in (0% cached) / 10,490,685 out -> list $24.31 / billed $24.31 | resolve calls/record 1.83

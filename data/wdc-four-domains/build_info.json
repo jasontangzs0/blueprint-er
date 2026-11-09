@@ -1,0 +1,70 @@
+{
+ "records": 10000,
+ "products": 2485,
+ "dup_products": 1608,
+ "records_in_dup": 9123,
+ "singletons": 877,
+ "extra_copies": 7515,
+ "largest": 15,
+ "true_pairs": 25345,
+ "size_histogram": {
+  "1": 877,
+  "2": 113,
+  "3": 143,
+  "4": 243,
+  "5": 347,
+  "6": 269,
+  "7": 146,
+  "8": 172,
+  "9": 65,
+  "10": 68,
+  "11": 23,
+  "12": 18,
+  "15": 1
+ },
+ "checked_pairs": 4376,
+ "checked_matches": 1198,
+ "checked_pairs_resolvable": 4376,
+ "per_category": {
+  "computers": {
+   "records": 2951,
+   "products": 745,
+   "dup_products": 453,
+   "records_in_dup": 2659,
+   "pairs": 1107,
+   "matches": 302
+  },
+  "cameras": {
+   "records": 2394,
+   "products": 560,
+   "dup_products": 383,
+   "records_in_dup": 2217,
+   "pairs": 1088,
+   "matches": 297
+  },
+  "watches": {
+   "records": 2472,
+   "products": 617,
+   "dup_products": 388,
+   "records_in_dup": 2243,
+   "pairs": 1087,
+   "matches": 300
+  },
+  "shoes": {
+   "records": 2183,
+   "products": 563,
+   "dup_products": 384,
+   "records_in_dup": 2004,
+   "pairs": 1094,
+   "matches": 299
+  }
+ },
+ "build": {
+  "records": 10000,
+  "singletons": 850,
+  "cap": 12,
+  "seed": 0,
+  "raw": "data/raw/wdc-lspc-v2",
+  "source": "WDC Product Data Corpus v2 gold standards + xlarge training sets (CC0)"
+ }
+}

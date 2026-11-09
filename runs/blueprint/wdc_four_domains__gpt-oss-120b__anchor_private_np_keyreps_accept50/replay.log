@@ -1,0 +1,21 @@
+[1s] wdc_four_domains: 10,000 records, fields ['title', 'brand', 'price', 'description'], bm25 on ['title', 'brand', 'description'] (word, k=20), 2,485 entities, 25,345 true pairs, 4,376 official test pairs
+[4s] round-0 BM25: 200,000 neighbour edges; 62 records without a mutual neighbour get no block (gate=mutual)
+[4s]   [round-0 blocks] blocks 9,938 (largest 60), reach 23,334/25,345 = 0.921, candidate pairs 4,007,791, calls/record 0.99
+[5s] identity cards: data/reper/cards/wdc_four_domains__cards_private_np.py (9 kinds); record kinds: {'other': 3199, 'watch': 1917, 'footwear': 1428, 'storage_memory': 1232, 'camera_accessory': 742, 'camera': 724}
+[5s] round 1: 9,938 calls on gpt-oss-120b (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[5s]   --no-calls: 1 of 9,938 blocks have no logged call; skipped
+[5s]   vote: 22,077 asserted pairs, 22,077 accepted, 0 rejected by contrary verdicts
+[5s] round 1 done: 9,937 calls, 67 parse failures, {} -> 3,070 clusters
+[5s]   [after round 1] P 0.671 R 0.794 F1 0.727 | asserted 29,988 TP 20,125 FP 9,863 FN 5,220 | clusters 3,070 | ACC 0.804 FP 0.891 | official test (4376 pairs) P 0.901 R 0.855 F1 0.877
+[5s] spend so far: list $5.24 / billed $5.24
+[111s] round-2 keys (gpt-5.6-sol): ['exact_normalized_title', 'identifier_and_quantity_anchors', 'lexical_and_character_anchors', 'sparse_and_compound_fallbacks'] | evidence strata {'title+description': 514, 'title+brand+description': 415, 'title+price+description': 164, 'title+brand+price+description': 113, 'title': 175, 'title+brand': 15, 'price+description': 16, 'title+price': 37, 'description': 12, 'title+brand+price': 2}
+[114s]   units 3,070 (1,582 with copies); key candidates: 4,211 key values held by <= 5000 units, 3,981,663 unit pairs before the rank cut
+[114s]   [round-2 entity-round lists (k=59)] blocks 3,070 (largest 376), reach 25,114/25,345 = 0.991, candidate pairs 52,125,206, calls/record 0.31
+[114s] round 2 (entity round): 3,070 calls on gpt-oss-120b
+[114s]   --no-calls: 3 of 3,070 blocks have no logged call; skipped
+[114s]   acceptance rule (shared key value held by <= 50 units): 19 selections dropped
+[114s]   vote: 931 asserted pairs, 931 accepted, 0 rejected by contrary verdicts
+[114s] round 2 (entity round) done: 3,067 calls, 0 parse failures, {} -> 2,564 clusters
+[115s]   [after round 2, entity round] P 0.587 R 0.873 F1 0.702 | asserted 37,692 TP 22,115 FP 15,577 FN 3,230 | clusters 2,564 | ACC 0.815 FP 0.896 | official test (4376 pairs) P 0.848 R 0.962 F1 0.901
+[115s] spend so far: list $7.89 / billed $7.89
+[115s] spend: gpt-oss-120b: 13,004 calls, 39,672,103 in (0% cached) / 3,223,936 out -> list $7.89 / billed $7.89 | resolve calls/record 1.30

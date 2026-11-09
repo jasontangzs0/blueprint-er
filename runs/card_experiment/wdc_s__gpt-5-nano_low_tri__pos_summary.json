@@ -1,0 +1,192 @@
+{
+ "sample_blocks": 1128,
+ "cols": [
+  "nano low",
+  "Luna low",
+  "gpt-5-nano low tri",
+  "gpt-5-nano low tri +unsure->Luna low"
+ ],
+ "table": {
+  "0-0.2": {
+   "nano low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_no": 24,
+    "pos_yes": 4
+   },
+   "Luna low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_yes": 18,
+    "pos_no": 10
+   },
+   "gpt-5-nano low tri": {
+    "neg": 52,
+    "neg_no": 51,
+    "pos": 28,
+    "pos_yes": 8,
+    "pos_unsure": 8,
+    "pos_no": 12,
+    "neg_unsure": 1
+   },
+   "gpt-5-nano low tri +unsure->Luna low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_yes": 13,
+    "pos_no": 15
+   }
+  },
+  "0.2-0.4": {
+   "nano low": {
+    "neg": 274,
+    "neg_no": 274,
+    "pos": 108,
+    "pos_no": 76,
+    "pos_yes": 32
+   },
+   "Luna low": {
+    "neg": 274,
+    "neg_no": 271,
+    "pos": 108,
+    "pos_yes": 82,
+    "pos_no": 26,
+    "neg_yes": 3
+   },
+   "gpt-5-nano low tri": {
+    "neg": 274,
+    "neg_no": 260,
+    "pos": 108,
+    "pos_unsure": 35,
+    "pos_no": 37,
+    "pos_yes": 36,
+    "neg_unsure": 11,
+    "neg_yes": 3
+   },
+   "gpt-5-nano low tri +unsure->Luna low": {
+    "neg": 274,
+    "neg_no": 271,
+    "pos": 108,
+    "pos_no": 47,
+    "pos_yes": 61,
+    "neg_yes": 3
+   }
+  },
+  "0.4-0.6": {
+   "nano low": {
+    "neg": 265,
+    "neg_no": 264,
+    "pos": 122,
+    "pos_no": 82,
+    "pos_yes": 40,
+    "neg_yes": 1
+   },
+   "Luna low": {
+    "neg": 265,
+    "neg_no": 256,
+    "pos": 122,
+    "pos_no": 29,
+    "pos_yes": 93,
+    "neg_yes": 9
+   },
+   "gpt-5-nano low tri": {
+    "neg": 265,
+    "neg_no": 235,
+    "pos": 122,
+    "pos_yes": 54,
+    "pos_no": 38,
+    "neg_yes": 6,
+    "pos_unsure": 30,
+    "neg_unsure": 24
+   },
+   "gpt-5-nano low tri +unsure->Luna low": {
+    "neg": 265,
+    "neg_no": 254,
+    "pos": 122,
+    "pos_yes": 76,
+    "pos_no": 46,
+    "neg_yes": 11
+   }
+  },
+  "0.6-0.8": {
+   "nano low": {
+    "pos": 88,
+    "pos_no": 47,
+    "neg": 122,
+    "neg_no": 119,
+    "pos_yes": 41,
+    "neg_yes": 3
+   },
+   "Luna low": {
+    "pos": 88,
+    "pos_no": 16,
+    "neg": 122,
+    "neg_no": 116,
+    "pos_yes": 72,
+    "neg_yes": 6
+   },
+   "gpt-5-nano low tri": {
+    "pos": 88,
+    "pos_no": 24,
+    "neg": 122,
+    "neg_no": 106,
+    "pos_yes": 39,
+    "pos_unsure": 25,
+    "neg_yes": 4,
+    "neg_unsure": 12
+   },
+   "gpt-5-nano low tri +unsure->Luna low": {
+    "pos": 88,
+    "pos_no": 33,
+    "neg": 122,
+    "neg_no": 117,
+    "pos_yes": 55,
+    "neg_yes": 5
+   }
+  },
+  "0.8-1.01": {
+   "nano low": {
+    "pos": 69,
+    "pos_no": 36,
+    "neg": 14,
+    "neg_yes": 2,
+    "pos_yes": 33,
+    "neg_no": 12
+   },
+   "Luna low": {
+    "pos": 69,
+    "pos_yes": 66,
+    "neg": 14,
+    "neg_yes": 4,
+    "neg_no": 10,
+    "pos_no": 3
+   },
+   "gpt-5-nano low tri": {
+    "pos": 69,
+    "pos_no": 9,
+    "neg": 14,
+    "neg_no": 10,
+    "pos_yes": 44,
+    "pos_unsure": 16,
+    "neg_unsure": 2,
+    "neg_yes": 2
+   },
+   "gpt-5-nano low tri +unsure->Luna low": {
+    "pos": 69,
+    "pos_no": 13,
+    "neg": 14,
+    "neg_no": 12,
+    "pos_yes": 56,
+    "neg_yes": 2
+   }
+  }
+ },
+ "cost_list": 0.68296975,
+ "usage": [
+  2487499,
+  1396487,
+  1128
+ ]
+}

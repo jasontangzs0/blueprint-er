@@ -1,0 +1,142 @@
+{
+ "sample_blocks": 1128,
+ "cols": [
+  "nano_low",
+  "Luna_low",
+  "gpt-oss-120b low anchor"
+ ],
+ "table": {
+  "0-0.2": {
+   "nano_low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_no": 24,
+    "pos_yes": 4
+   },
+   "Luna_low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_yes": 18,
+    "pos_no": 10
+   },
+   "gpt-oss-120b low anchor": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_no": 16,
+    "pos_yes": 12
+   }
+  },
+  "0.2-0.4": {
+   "nano_low": {
+    "neg": 274,
+    "neg_no": 274,
+    "pos": 108,
+    "pos_no": 76,
+    "pos_yes": 32
+   },
+   "Luna_low": {
+    "neg": 274,
+    "neg_no": 271,
+    "pos": 108,
+    "pos_yes": 82,
+    "pos_no": 26,
+    "neg_yes": 3
+   },
+   "gpt-oss-120b low anchor": {
+    "neg": 272,
+    "neg_no": 268,
+    "pos": 108,
+    "pos_no": 55,
+    "pos_yes": 53,
+    "neg_yes": 4
+   }
+  },
+  "0.4-0.6": {
+   "nano_low": {
+    "neg": 265,
+    "neg_no": 264,
+    "pos": 122,
+    "pos_no": 82,
+    "pos_yes": 40,
+    "neg_yes": 1
+   },
+   "Luna_low": {
+    "neg": 265,
+    "neg_no": 256,
+    "pos": 122,
+    "pos_no": 29,
+    "pos_yes": 93,
+    "neg_yes": 9
+   },
+   "gpt-oss-120b low anchor": {
+    "neg": 264,
+    "neg_no": 255,
+    "pos": 122,
+    "pos_no": 63,
+    "pos_yes": 59,
+    "neg_yes": 9
+   }
+  },
+  "0.6-0.8": {
+   "nano_low": {
+    "pos": 88,
+    "pos_no": 47,
+    "neg": 122,
+    "neg_no": 119,
+    "pos_yes": 41,
+    "neg_yes": 3
+   },
+   "Luna_low": {
+    "pos": 88,
+    "pos_no": 16,
+    "neg": 122,
+    "neg_no": 116,
+    "pos_yes": 72,
+    "neg_yes": 6
+   },
+   "gpt-oss-120b low anchor": {
+    "pos": 88,
+    "pos_no": 40,
+    "neg": 122,
+    "neg_no": 119,
+    "pos_yes": 48,
+    "neg_yes": 3
+   }
+  },
+  "0.8-1.01": {
+   "nano_low": {
+    "pos": 69,
+    "pos_no": 36,
+    "neg": 14,
+    "neg_yes": 2,
+    "pos_yes": 33,
+    "neg_no": 12
+   },
+   "Luna_low": {
+    "pos": 69,
+    "pos_yes": 66,
+    "neg": 14,
+    "neg_yes": 4,
+    "neg_no": 10,
+    "pos_no": 3
+   },
+   "gpt-oss-120b low anchor": {
+    "pos": 69,
+    "pos_no": 26,
+    "neg": 14,
+    "neg_yes": 4,
+    "pos_yes": 43,
+    "neg_no": 10
+   }
+  }
+ },
+ "cost_list": 0.5267145,
+ "usage": [
+  2369710,
+  285430,
+  1128
+ ]
+}

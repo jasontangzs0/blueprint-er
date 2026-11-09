@@ -1,0 +1,72 @@
+{
+ "records": 10000,
+ "products": 3346,
+ "dup_products": 2466,
+ "records_in_dup": 9120,
+ "singletons": 880,
+ "extra_copies": 6654,
+ "largest": 12,
+ "true_pairs": 21678,
+ "size_histogram": {
+  "2": 1241,
+  "3": 479,
+  "4": 225,
+  "5": 112,
+  "6": 92,
+  "7": 64,
+  "8": 45,
+  "9": 24,
+  "10": 11,
+  "11": 21,
+  "12": 152
+ },
+ "per_category": {
+  "Automotive": 2500,
+  "Clothing": 2500,
+  "Home_and_Garden": 2500,
+  "Sports_and_Outdoors": 2500
+ },
+ "build": {
+  "records": 10000,
+  "singletons_per_category": 220,
+  "cap": 12,
+  "max_size": 100,
+  "seed": 0,
+  "categories": [
+   "Clothing",
+   "Home_and_Garden",
+   "Sports_and_Outdoors",
+   "Automotive"
+  ],
+  "excluded_products": 2485,
+  "corpus": "data/raw/wdc-lspc-v2/offers_corpus_english_v2_nonnorm.json.gz",
+  "multilingual_share": 0.5
+ },
+ "multilingual": {
+  "Clothing": {
+   "multilingual_products_available": 12031,
+   "chosen": 589,
+   "chosen_multilingual": 288,
+   "records_multilingual": 1202
+  },
+  "Home_and_Garden": {
+   "multilingual_products_available": 12255,
+   "chosen": 593,
+   "chosen_multilingual": 275,
+   "records_multilingual": 1285
+  },
+  "Sports_and_Outdoors": {
+   "multilingual_products_available": 8810,
+   "chosen": 676,
+   "chosen_multilingual": 381,
+   "records_multilingual": 1281
+  },
+  "Automotive": {
+   "multilingual_products_available": 8333,
+   "chosen": 608,
+   "chosen_multilingual": 293,
+   "records_multilingual": 1280
+  }
+ },
+ "version": "harder"
+}

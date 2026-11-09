@@ -1,0 +1,20 @@
+[10s] cit_51k: 51,301 records, fields ['title', 'authors', 'journal', 'year'], bm25 on ['title', 'authors', 'journal', 'year'] (char3, k=10), 45,000 entities, 9,969 true pairs
+[68s] round-0 BM25: 513,010 neighbour edges; 1,852 records without a mutual neighbour get no block (gate=mutual)
+[68s]   [round-0 blocks] blocks 49,449 (largest 60), reach 9,969/9,969 = 1.000, candidate pairs 7,134,092, calls/record 0.96
+[68s] identity cards: data/reper/cards/cit_51k__cards_private_np.py (2 kinds); record kinds: {'publication': 51301}
+[68s] round 1: 49,449 calls on gpt-oss-120b (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[68s]   vote: 9,710 asserted pairs, 9,710 accepted, 0 rejected by contrary verdicts
+[68s] round 1 done: 49,449 calls, 23 parse failures, {} -> 44,918 clusters
+[80s]   [after round 1] P 0.975 R 0.958 F1 0.966 | asserted 9,790 TP 9,548 FP 242 FN 421 | clusters 44,918 | ACC 0.994 FP 0.997
+[80s] spend so far: list $13.83 / billed $13.83
+[209s] round-2 keys (gpt-5.6-sol): ['exact_normalized_title', 'author_anchors', 'cross_field_token_anchors', 'character_shingles_and_missing_fallback'] | evidence strata {'title+authors+year': 328, 'authors+year': 1119, 'authors+journal+year': 497, 'journal+year': 436, 'year': 1018, 'title+journal+year': 170, 'title+authors+journal+year': 227, 'journal': 26, 'title+year': 212, 'title+authors': 63, 'title': 16, 'title+authors+journal': 20, 'authors': 57, 'authors+journal': 20, 'title+journal': 11}
+[293s]   units 44,918 (4,252 with copies); key candidates: 59,316 key values held by <= 5000 units, 43,236,800 unit pairs before the rank cut
+[294s]   [round-2 entity-round lists (k=59)] blocks 44,856 (largest 106), reach 9,969/9,969 = 1.000, candidate pairs 102,577,089, calls/record 0.87
+[294s] round 2 (entity round): 44,856 calls on gpt-oss-120b
+[294s]   --no-calls: 3 of 44,856 blocks have no logged call; skipped
+[294s]   acceptance rule (shared key value held by <= 50 units): 3 selections dropped
+[294s]   vote: 101 asserted pairs, 101 accepted, 0 rejected by contrary verdicts
+[294s] round 2 (entity round) done: 44,853 calls, 1 parse failures, {} -> 44,822 clusters
+[306s]   [after round 2, entity round] P 0.965 R 0.973 F1 0.969 | asserted 10,057 TP 9,702 FP 355 FN 267 | clusters 44,822 | ACC 0.993 FP 0.997
+[306s] spend so far: list $39.58 / billed $39.58
+[306s] spend: gpt-oss-120b: 94,302 calls, 211,798,824 in (0% cached) / 13,013,010 out -> list $39.58 / billed $39.58 | resolve calls/record 1.84

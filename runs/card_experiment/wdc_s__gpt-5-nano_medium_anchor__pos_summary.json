@@ -1,0 +1,141 @@
+{
+ "sample_blocks": 1128,
+ "cols": [
+  "nano low",
+  "Luna low",
+  "gpt-5-nano medium anchor"
+ ],
+ "table": {
+  "0-0.2": {
+   "nano low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_no": 24,
+    "pos_yes": 4
+   },
+   "Luna low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_yes": 18,
+    "pos_no": 10
+   },
+   "gpt-5-nano medium anchor": {
+    "neg": 51,
+    "neg_no": 51,
+    "pos": 28,
+    "pos_yes": 8,
+    "pos_no": 20
+   }
+  },
+  "0.2-0.4": {
+   "nano low": {
+    "neg": 274,
+    "neg_no": 274,
+    "pos": 108,
+    "pos_no": 76,
+    "pos_yes": 32
+   },
+   "Luna low": {
+    "neg": 274,
+    "neg_no": 271,
+    "pos": 108,
+    "pos_yes": 82,
+    "pos_no": 26,
+    "neg_yes": 3
+   },
+   "gpt-5-nano medium anchor": {
+    "neg": 272,
+    "neg_no": 272,
+    "pos": 107,
+    "pos_no": 65,
+    "pos_yes": 42
+   }
+  },
+  "0.4-0.6": {
+   "nano low": {
+    "neg": 265,
+    "neg_no": 264,
+    "pos": 122,
+    "pos_no": 82,
+    "pos_yes": 40,
+    "neg_yes": 1
+   },
+   "Luna low": {
+    "neg": 265,
+    "neg_no": 256,
+    "pos": 122,
+    "pos_no": 29,
+    "pos_yes": 93,
+    "neg_yes": 9
+   },
+   "gpt-5-nano medium anchor": {
+    "neg": 260,
+    "neg_no": 255,
+    "pos": 119,
+    "pos_no": 62,
+    "pos_yes": 57,
+    "neg_yes": 5
+   }
+  },
+  "0.6-0.8": {
+   "nano low": {
+    "pos": 88,
+    "pos_no": 47,
+    "neg": 122,
+    "neg_no": 119,
+    "pos_yes": 41,
+    "neg_yes": 3
+   },
+   "Luna low": {
+    "pos": 88,
+    "pos_no": 16,
+    "neg": 122,
+    "neg_no": 116,
+    "pos_yes": 72,
+    "neg_yes": 6
+   },
+   "gpt-5-nano medium anchor": {
+    "pos": 88,
+    "pos_no": 43,
+    "neg": 120,
+    "neg_no": 118,
+    "pos_yes": 45,
+    "neg_yes": 2
+   }
+  },
+  "0.8-1.01": {
+   "nano low": {
+    "pos": 69,
+    "pos_no": 36,
+    "neg": 14,
+    "neg_yes": 2,
+    "pos_yes": 33,
+    "neg_no": 12
+   },
+   "Luna low": {
+    "pos": 69,
+    "pos_yes": 66,
+    "neg": 14,
+    "neg_yes": 4,
+    "neg_no": 10,
+    "pos_no": 3
+   },
+   "gpt-5-nano medium anchor": {
+    "pos": 69,
+    "pos_no": 23,
+    "neg": 14,
+    "neg_no": 13,
+    "pos_yes": 46,
+    "neg_yes": 1
+   }
+  }
+ },
+ "cost_list": 1.7244001500000001,
+ "usage": [
+  2397259,
+  4011343,
+  1128
+ ]
+}

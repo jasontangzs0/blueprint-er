@@ -1,0 +1,20 @@
+[2s] wdc_four_goods_harder: 10,000 records, fields ['title', 'brand', 'price', 'description'], bm25 on ['title', 'brand', 'description'] (word, k=20), 3,346 entities, 21,678 true pairs
+[4s] round-0 BM25: 199,658 neighbour edges; 43 records without a mutual neighbour get no block (gate=mutual)
+[4s]   [round-0 blocks] blocks 9,957 (largest 60), reach 20,577/21,678 = 0.949, candidate pairs 4,117,561, calls/record 1.00
+[4s] identity cards: data/reper/cards/wdc_four_goods_harder__cards_private_np.py (9 kinds); record kinds: {'other': 3977, 'apparel': 2462, 'automotive_part': 1243, 'furniture_home': 638, 'commercial_equipment': 546, 'sports_gear': 464}
+[4s] round 1: 9,957 calls on gpt-5-nano (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[4s]   --no-calls: 3 of 9,957 blocks have no logged call; skipped
+[4s]   vote: 17,100 asserted pairs, 17,100 accepted, 0 rejected by contrary verdicts
+[4s] round 1 done: 9,954 calls, 2 parse failures, {'unknown': 10} -> 4,182 clusters
+[4s]   [after round 1] P 0.885 R 0.759 F1 0.817 | asserted 18,607 TP 16,463 FP 2,144 FN 5,215 | clusters 4,182 | ACC 0.862 FP 0.927
+[4s] spend so far: list $3.66 / billed $3.62
+[97s] round-2 keys (gpt-5.6-sol): ['exact_title_fragments', 'identifier_keys', 'lexical_anchor_keys', 'fuzzy_and_sparse_keys'] | evidence strata {'title+description': 779, 'title': 615, 'description': 32, 'title+brand+description': 142, 'title+price+description': 85, 'price': 96, 'brand+description': 33, 'title+brand+price+description': 9, 'price+description': 2, 'title+brand': 35, 'title+price': 20, 'title+brand+price': 2, 'brand': 5}
+[97s]   units 4,182 (2,350 with copies); key candidates: 11,249 key values held by <= 5000 units, 450,978 unit pairs before the rank cut
+[98s]   [round-2 entity-round lists (k=59)] blocks 4,174 (largest 380), reach 21,247/21,678 = 0.980, candidate pairs 37,434,971, calls/record 0.42
+[98s] round 2 (entity round): 4,174 calls on gpt-5-nano
+[98s]   acceptance rule (shared key value held by <= 50 units): 13 selections dropped
+[98s]   vote: 642 asserted pairs, 642 accepted, 0 rejected by contrary verdicts
+[98s] round 2 (entity round) done: 4,174 calls, 4 parse failures, {} -> 3,726 clusters
+[98s]   [after round 2, entity round] P 0.852 R 0.828 F1 0.839 | asserted 21,062 TP 17,939 FP 3,123 FN 3,739 | clusters 3,726 | ACC 0.880 FP 0.938
+[98s] spend so far: list $5.33 / billed $5.29
+[98s] spend: gpt-5-nano: 14,128 calls, 37,688,513 in (2% cached) / 8,617,184 out -> list $5.33 / billed $5.29 | resolve calls/record 1.41

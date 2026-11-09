@@ -1,0 +1,21 @@
+[7s] songs_50k: 50,000 records, fields ['title', 'release', 'artist_name', 'duration', 'year'], bm25 on ['title', 'artist_name'] (word, k=10), 45,843 entities, 7,087 true pairs
+[12s] round-0 BM25: 484,481 neighbour edges; 907 records without a mutual neighbour get no block (gate=mutual)
+[12s]   [round-0 blocks] blocks 49,093 (largest 60), reach 7,082/7,087 = 0.999, candidate pairs 5,369,240, calls/record 0.98
+[12s] identity cards: data/reper/cards/songs_50k__cards_private_np.py (2 kinds); record kinds: {'song': 50000}
+[12s] round 1: 49,093 calls on gpt-5-nano (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[12s]   --no-calls: 6 of 49,093 blocks have no logged call; skipped
+[12s]   vote: 6,074 asserted pairs, 6,074 accepted, 0 rejected by contrary verdicts
+[12s] round 1 done: 49,087 calls, 21 parse failures, {} -> 45,999 clusters
+[33s]   [after round 1] P 0.947 R 0.835 F1 0.887 | asserted 6,246 TP 5,915 FP 331 FN 1,172 | clusters 45,999 | ACC 0.987 FP 0.993
+[33s] spend so far: list $11.78 / billed $11.78
+[88s] round-2 keys (gpt-5.6-sol): ['exact_identity', 'qualifier_and_alias', 'adjacent_anchor', 'consonant_signature'] | evidence strata {'duration': 525, 'release+duration': 1843, 'title+release+duration+year': 84, 'title+release+duration': 48, 'release+artist_name+duration': 98, 'release+duration+year': 124, 'title+release+artist_name+duration+year': 8, 'title+duration': 79, 'release': 35, 'artist_name+duration': 7, 'release+artist_name+duration+year': 15, 'release+year': 3, 'duration+year': 6, 'title+duration+year': 10, 'artist_name': 1, 'title+release+artist_name+duration': 5, 'release+artist_name': 1, 'title+artist_name+duration': 1, 'title+year': 1}
+[99s]   units 45,999 (2,938 with copies); key candidates: 65,642 key values held by <= 5000 units, 9,379,673 unit pairs before the rank cut
+[99s]   [round-2 entity-round lists (k=59)] blocks 45,705 (largest 102), reach 7,046/7,087 = 0.994, candidate pairs 76,935,554, calls/record 0.91
+[99s] round 2 (entity round): 45,705 calls on gpt-5-nano
+[99s]   --no-calls: 3 of 45,705 blocks have no logged call; skipped
+[99s]   acceptance rule (shared key value held by <= 50 units): 0 selections dropped
+[99s]   vote: 428 asserted pairs, 428 accepted, 0 rejected by contrary verdicts
+[99s] round 2 (entity round) done: 45,702 calls, 32 parse failures, {} -> 45,616 clusters
+[111s]   [after round 2, entity round] P 0.929 R 0.942 F1 0.935 | asserted 7,191 TP 6,678 FP 513 FN 409 | clusters 45,616 | ACC 0.989 FP 0.994
+[112s] spend so far: list $24.34 / billed $24.34
+[112s] spend: gpt-5-nano: 94,789 calls, 169,702,899 in (0% cached) / 39,648,307 out -> list $24.34 / billed $24.34 | resolve calls/record 1.90

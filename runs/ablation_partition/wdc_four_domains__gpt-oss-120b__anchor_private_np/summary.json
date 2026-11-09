@@ -1,0 +1,49 @@
+{
+ "name": "wdc_four_domains",
+ "model": "gpt-oss-120b",
+ "reasoning": "low",
+ "anchor": true,
+ "cards": "data/reper/cards/wdc_four_domains__cards_private_np.py",
+ "privatize": "gpt-oss-120b",
+ "k": 20,
+ "records": 10000,
+ "true_pairs": 25345,
+ "reach0": 0.9206549615308739,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.6711017740429505,
+   "R": 0.7940422173998817,
+   "F1": 0.727414020566389,
+   "asserted": 29988,
+   "TP": 20125,
+   "clusters": 3070
+  },
+  {
+   "round": 2,
+   "P": 0.6746991880523038,
+   "R": 0.8163740382718485,
+   "F1": 0.7388059701492536,
+   "asserted": 30667,
+   "TP": 20691,
+   "clusters": 2941
+  }
+ ],
+ "spend": {
+  "gpt-oss-120b": {
+   "prompt": 33025934,
+   "cached": 0,
+   "completion": 3295541,
+   "calls": 12283
+  },
+  "gpt-5.6-sol": {
+   "prompt": 64196,
+   "cached": 0,
+   "completion": 9226,
+   "calls": 2
+  }
+ },
+ "cost_list": 7.5887507,
+ "cost_billed": 7.5887507,
+ "calls_per_record": 1.2283
+}

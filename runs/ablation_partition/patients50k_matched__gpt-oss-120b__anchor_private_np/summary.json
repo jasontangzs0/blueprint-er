@@ -1,0 +1,58 @@
+{
+ "name": "patients50k_matched",
+ "model": "gpt-oss-120b",
+ "reasoning": "low",
+ "anchor": true,
+ "cards": "data/reper/cards/patients50k_matched__cards_private_np.py",
+ "privatize": "gpt-oss-120b",
+ "k": 10,
+ "records": 50043,
+ "true_pairs": 4949,
+ "reach0": 0.9535259648413821,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.7913332032012492,
+   "R": 0.8191553849262477,
+   "F1": 0.8050039714058775,
+   "asserted": 5123,
+   "TP": 4054,
+   "clusters": 45225
+  },
+  {
+   "round": 2,
+   "P": 0.7761027359017308,
+   "R": 0.8425944635279855,
+   "F1": 0.8079829490408836,
+   "asserted": 5373,
+   "TP": 4170,
+   "clusters": 45021
+  },
+  {
+   "round": 3,
+   "P": 0.7446771978021978,
+   "R": 0.8763386542735906,
+   "F1": 0.8051610507750857,
+   "asserted": 5824,
+   "TP": 4337,
+   "clusters": 44634
+  }
+ ],
+ "spend": {
+  "gpt-oss-120b": {
+   "prompt": 155326677,
+   "cached": 0,
+   "completion": 15271458,
+   "calls": 95539
+  },
+  "gpt-5.6-sol": {
+   "prompt": 373080,
+   "cached": 0,
+   "completion": 8769,
+   "calls": 2
+  }
+ },
+ "cost_list": 34.80319335,
+ "cost_billed": 34.80319335,
+ "calls_per_record": 1.9091381411985693
+}

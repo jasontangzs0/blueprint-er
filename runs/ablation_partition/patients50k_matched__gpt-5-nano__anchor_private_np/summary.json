@@ -1,0 +1,58 @@
+{
+ "name": "patients50k_matched",
+ "model": "gpt-5-nano",
+ "reasoning": "low",
+ "anchor": true,
+ "cards": "data/reper/cards/patients50k_matched__cards_private_np.py",
+ "privatize": "gpt-oss-120b",
+ "k": 10,
+ "records": 50043,
+ "true_pairs": 4949,
+ "reach0": 0.9535259648413821,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.8593996840442338,
+   "R": 0.6595271772075166,
+   "F1": 0.7463130216074083,
+   "asserted": 3798,
+   "TP": 3264,
+   "clusters": 46378
+  },
+  {
+   "round": 2,
+   "P": 0.8098924731182796,
+   "R": 0.7609618104667609,
+   "F1": 0.7846650692780498,
+   "asserted": 4650,
+   "TP": 3766,
+   "clusters": 45654
+  },
+  {
+   "round": 3,
+   "P": 0.6525759577278731,
+   "R": 0.7985451606385129,
+   "F1": 0.7182189913675602,
+   "asserted": 6056,
+   "TP": 3952,
+   "clusters": 45252
+  }
+ ],
+ "spend": {
+  "gpt-5-nano": {
+   "prompt": 148211518,
+   "cached": 287232,
+   "completion": 54323180,
+   "calls": 108080
+  },
+  "gpt-5.6-sol": {
+   "prompt": 355872,
+   "cached": 0,
+   "completion": 10404,
+   "calls": 2
+  }
+ },
+ "cost_list": 31.440475900000003,
+ "cost_billed": 31.427550460000003,
+ "calls_per_record": 2.1597426213456425
+}

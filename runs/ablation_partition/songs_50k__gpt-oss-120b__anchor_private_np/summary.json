@@ -1,0 +1,49 @@
+{
+ "name": "songs_50k",
+ "model": "gpt-oss-120b",
+ "reasoning": "low",
+ "anchor": true,
+ "cards": "data/reper/cards/songs_50k__cards_private_np.py",
+ "privatize": "gpt-oss-120b",
+ "k": 10,
+ "records": 50000,
+ "true_pairs": 7087,
+ "reach0": 0.9992944828559334,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.968240817453742,
+   "R": 0.989417242839001,
+   "F1": 0.9787144950799078,
+   "asserted": 7242,
+   "TP": 7012,
+   "clusters": 45727
+  },
+  {
+   "round": 2,
+   "P": 0.9674707098552722,
+   "R": 0.9904049668406942,
+   "F1": 0.9788035141542323,
+   "asserted": 7255,
+   "TP": 7019,
+   "clusters": 45717
+  }
+ ],
+ "spend": {
+  "gpt-oss-120b": {
+   "prompt": 63489834,
+   "cached": 0,
+   "completion": 6479251,
+   "calls": 54296
+  },
+  "gpt-5.6-sol": {
+   "prompt": 52950,
+   "cached": 25637,
+   "completion": 10226,
+   "calls": 2
+  }
+ },
+ "cost_list": 14.0397087,
+ "cost_billed": 13.91280555,
+ "calls_per_record": 1.08592
+}

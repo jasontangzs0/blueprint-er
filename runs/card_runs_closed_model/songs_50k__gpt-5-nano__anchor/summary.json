@@ -1,0 +1,56 @@
+{
+ "name": "songs_50k",
+ "model": "gpt-5-nano",
+ "reasoning": "low",
+ "anchor": true,
+ "k": 10,
+ "records": 50000,
+ "true_pairs": 7087,
+ "reach0": 0.9992944828559334,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.9101158784841842,
+   "R": 0.4100465641315084,
+   "F1": 0.5653696498054475,
+   "asserted": 3193,
+   "TP": 2906,
+   "clusters": 47926
+  },
+  {
+   "round": 2,
+   "P": 0.8458207016024253,
+   "R": 0.5511499929448286,
+   "F1": 0.6674070909867578,
+   "asserted": 4618,
+   "TP": 3906,
+   "clusters": 47268
+  },
+  {
+   "round": 3,
+   "P": 0.5588130563798219,
+   "R": 0.6643149428531113,
+   "F1": 0.6070139247034554,
+   "asserted": 8425,
+   "TP": 4708,
+   "clusters": 46259
+  }
+ ],
+ "spend": {
+  "gpt-5-nano": {
+   "prompt": 119796106,
+   "cached": 14080,
+   "completion": 45893701,
+   "calls": 95072
+  },
+  "gpt-5.6-sol": {
+   "prompt": 51827,
+   "cached": 0,
+   "completion": 10499,
+   "calls": 2
+  }
+ },
+ "cost_list": 24.9788012,
+ "cost_billed": 24.9781676,
+ "calls_per_record": 1.90144
+}

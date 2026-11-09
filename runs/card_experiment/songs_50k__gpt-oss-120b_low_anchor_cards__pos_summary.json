@@ -1,0 +1,83 @@
+{
+ "sample_blocks": 1000,
+ "cols": [
+  "nano_low",
+  "gpt-oss-120b low anchor_cards"
+ ],
+ "table": {
+  "0-0.2": {
+   "nano_low": {
+    "neg": 531,
+    "neg_no": 531,
+    "pos": 5,
+    "pos_no": 4,
+    "pos_yes": 1
+   },
+   "gpt-oss-120b low anchor_cards": {
+    "neg": 532,
+    "neg_no": 532,
+    "pos": 5,
+    "pos_no": 3,
+    "pos_yes": 2
+   }
+  },
+  "0.2-0.4": {
+   "nano_low": {
+    "neg": 259,
+    "neg_no": 259,
+    "pos": 5,
+    "pos_no": 2,
+    "pos_yes": 3
+   },
+   "gpt-oss-120b low anchor_cards": {
+    "neg": 258,
+    "neg_no": 258,
+    "pos": 5,
+    "pos_no": 1,
+    "pos_yes": 4
+   }
+  },
+  "0.4-0.6": {
+   "nano_low": {
+    "neg": 129,
+    "neg_no": 129
+   },
+   "gpt-oss-120b low anchor_cards": {
+    "neg": 132,
+    "neg_no": 132
+   }
+  },
+  "0.6-0.8": {
+   "nano_low": {
+    "neg": 18,
+    "neg_no": 18
+   },
+   "gpt-oss-120b low anchor_cards": {
+    "neg": 18,
+    "neg_no": 18
+   }
+  },
+  "0.8-1.01": {
+   "nano_low": {
+    "pos": 1203,
+    "pos_yes": 264,
+    "pos_no": 939,
+    "neg": 24,
+    "neg_no": 24
+   },
+   "gpt-oss-120b low anchor_cards": {
+    "pos": 1196,
+    "pos_yes": 570,
+    "pos_no": 626,
+    "neg": 24,
+    "neg_no": 24
+   }
+  }
+ },
+ "cost_list": 0.27666045,
+ "usage": [
+  1137751,
+  176663,
+  1000
+ ]
+}

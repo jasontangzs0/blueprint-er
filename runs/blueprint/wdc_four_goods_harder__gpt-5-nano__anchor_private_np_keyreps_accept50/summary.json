@@ -1,0 +1,44 @@
+{
+ "name": "wdc_four_goods_harder",
+ "model": "gpt-5-nano",
+ "reasoning": "low",
+ "anchor": true,
+ "cards": "data/reper/cards/wdc_four_goods_harder__cards_private_np.py",
+ "privatize": "gpt-oss-120b",
+ "k": 20,
+ "records": 10000,
+ "true_pairs": 21678,
+ "reach0": 0.9492111818433435,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.8847745472134143,
+   "R": 0.7594335270781437,
+   "F1": 0.8173265483430556,
+   "asserted": 18607,
+   "TP": 16463,
+   "clusters": 4182
+  },
+  {
+   "round": 2,
+   "mode": "entity round",
+   "P": 0.8517234830500428,
+   "R": 0.8275209890211274,
+   "F1": 0.8394478240524099,
+   "asserted": 21062,
+   "TP": 17939,
+   "clusters": 3726
+  }
+ ],
+ "spend": {
+  "gpt-5-nano": {
+   "prompt": 37688513,
+   "cached": 815360,
+   "completion": 8617184,
+   "calls": 14128
+  }
+ },
+ "cost_list": 5.33129925,
+ "cost_billed": 5.29460805,
+ "calls_per_record": 1.4128
+}

@@ -1,0 +1,44 @@
+{
+ "name": "cit_51k",
+ "model": "gpt-5-nano",
+ "reasoning": "low",
+ "anchor": true,
+ "cards": "data/reper/cards/cit_51k__cards_private_np.py",
+ "privatize": "gpt-oss-120b",
+ "k": 10,
+ "records": 51301,
+ "true_pairs": 9969,
+ "reach0": 1.0,
+ "history": [
+  {
+   "round": 1,
+   "P": 0.9469949916527546,
+   "R": 0.9104223091583911,
+   "F1": 0.9283485910090524,
+   "asserted": 9584,
+   "TP": 9076,
+   "clusters": 45058
+  },
+  {
+   "round": 2,
+   "mode": "entity round",
+   "P": 0.9216982940387196,
+   "R": 0.9646905406760959,
+   "F1": 0.9427045042395726,
+   "asserted": 10434,
+   "TP": 9617,
+   "clusters": 44678
+  }
+ ],
+ "spend": {
+  "gpt-5-nano": {
+   "prompt": 217317667,
+   "cached": 96000,
+   "completion": 42628749,
+   "calls": 94505
+  }
+ },
+ "cost_list": 27.91738295,
+ "cost_billed": 27.91306295,
+ "calls_per_record": 1.8421668193602463
+}

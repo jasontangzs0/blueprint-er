@@ -1,0 +1,19 @@
+[2s] wdc_four_goods_harder: 10,000 records, fields ['title', 'brand', 'price', 'description'], bm25 on ['title', 'brand', 'description'] (word, k=20), 3,346 entities, 21,678 true pairs
+[4s] round-0 BM25: 199,658 neighbour edges; 43 records without a mutual neighbour get no block (gate=mutual)
+[4s]   [round-0 blocks] blocks 9,957 (largest 60), reach 20,577/21,678 = 0.949, candidate pairs 4,117,561, calls/record 1.00
+[5s] identity cards: data/reper/cards/wdc_four_goods_harder__cards_private_np.py (9 kinds); record kinds: {'other': 3977, 'apparel': 2462, 'automotive_part': 1243, 'furniture_home': 638, 'commercial_equipment': 546, 'sports_gear': 464}
+[5s] round 1: 9,957 calls on gpt-oss-120b (reasoning=low) [anchored: owner vs numbered neighbours, either-side merge]
+[5s]   vote: 17,443 asserted pairs, 17,443 accepted, 0 rejected by contrary verdicts
+[5s] round 1 done: 9,957 calls, 10 parse failures, {} -> 4,189 clusters
+[5s]   [after round 1] P 0.901 R 0.766 F1 0.828 | asserted 18,432 TP 16,600 FP 1,832 FN 5,078 | clusters 4,189 | ACC 0.866 FP 0.929
+[5s] spend so far: list $4.43 / billed $4.43
+[99s] round-2 keys (gpt-5.6-sol): ['exact_normalized', 'token_anchors', 'character_minhash', 'rare_character_fallback'] | evidence strata {'title+description': 776, 'title': 609, 'description': 29, 'title+brand+description': 134, 'title+price+description': 83, 'price': 97, 'brand': 8, 'title+brand+price+description': 9, 'title+brand': 33, 'brand+description': 39, 'title+price': 24, 'price+description': 2}
+[107s]   units 4,189 (2,332 with copies); key candidates: 5,987 key values held by <= 5000 units, 7,267,169 unit pairs before the rank cut
+[107s]   [round-2 entity-round lists (k=59)] blocks 4,189 (largest 434), reach 21,259/21,678 = 0.981, candidate pairs 43,602,748, calls/record 0.42
+[107s] round 2 (entity round): 4,189 calls on gpt-oss-120b
+[107s]   acceptance rule (shared key value held by <= 50 units): 69 selections dropped
+[107s]   vote: 557 asserted pairs, 557 accepted, 0 rejected by contrary verdicts
+[107s] round 2 (entity round) done: 4,189 calls, 0 parse failures, {} -> 3,858 clusters
+[108s]   [after round 2, entity round] P 0.881 R 0.820 F1 0.849 | asserted 20,178 TP 17,770 FP 2,408 FN 3,908 | clusters 3,858 | ACC 0.885 FP 0.939
+[108s] spend so far: list $7.71 / billed $7.71
+[108s] spend: gpt-oss-120b: 14,146 calls, 40,993,455 in (0% cached) / 2,602,274 out -> list $7.71 / billed $7.71 | resolve calls/record 1.41

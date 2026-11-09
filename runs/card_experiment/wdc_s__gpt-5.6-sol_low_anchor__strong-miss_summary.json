@@ -1,0 +1,106 @@
+{
+ "sample_blocks": 359,
+ "cols": [
+  "nano low",
+  "Luna low",
+  "gpt-5.6-sol low anchor"
+ ],
+ "table": {
+  "0-0.2": {
+   "nano low": {
+    "neg": 22,
+    "neg_no": 22,
+    "pos": 15,
+    "pos_no": 15
+   },
+   "Luna low": {
+    "neg": 22,
+    "neg_no": 22,
+    "pos": 15,
+    "pos_no": 15
+   },
+   "gpt-5.6-sol low anchor": {}
+  },
+  "0.2-0.4": {
+   "nano low": {
+    "neg": 141,
+    "neg_no": 140,
+    "pos": 44,
+    "pos_no": 40,
+    "pos_yes": 4,
+    "neg_yes": 1
+   },
+   "Luna low": {
+    "neg": 141,
+    "neg_no": 136,
+    "pos": 44,
+    "pos_no": 41,
+    "neg_yes": 5,
+    "pos_yes": 3
+   },
+   "gpt-5.6-sol low anchor": {}
+  },
+  "0.4-0.6": {
+   "nano low": {
+    "pos": 53,
+    "pos_no": 45,
+    "neg": 124,
+    "neg_no": 123,
+    "pos_yes": 8,
+    "neg_yes": 1
+   },
+   "Luna low": {
+    "pos": 53,
+    "pos_no": 49,
+    "neg": 124,
+    "neg_no": 113,
+    "pos_yes": 4,
+    "neg_yes": 11
+   },
+   "gpt-5.6-sol low anchor": {}
+  },
+  "0.6-0.8": {
+   "nano low": {
+    "pos": 30,
+    "pos_no": 26,
+    "neg": 54,
+    "neg_no": 50,
+    "pos_yes": 4,
+    "neg_yes": 4
+   },
+   "Luna low": {
+    "pos": 30,
+    "pos_no": 29,
+    "neg": 54,
+    "neg_no": 46,
+    "neg_yes": 8,
+    "pos_yes": 1
+   },
+   "gpt-5.6-sol low anchor": {}
+  },
+  "0.8-1.01": {
+   "nano low": {
+    "neg": 8,
+    "neg_yes": 2,
+    "neg_no": 6,
+    "pos": 13,
+    "pos_no": 13
+   },
+   "Luna low": {
+    "neg": 8,
+    "neg_yes": 5,
+    "neg_no": 3,
+    "pos": 13,
+    "pos_yes": 4,
+    "pos_no": 9
+   },
+   "gpt-5.6-sol low anchor": {}
+  }
+ },
+ "cost_list": 0.0,
+ "usage": [
+  0,
+  0,
+  0
+ ]
+}

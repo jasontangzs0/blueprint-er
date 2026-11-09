@@ -1,0 +1,140 @@
+{
+ "sample_blocks": 1128,
+ "cols": [
+  "nano_low",
+  "Luna_low",
+  "gpt-5-nano low anchor_evs"
+ ],
+ "table": {
+  "0-0.2": {
+   "nano_low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_no": 24,
+    "pos_yes": 4
+   },
+   "Luna_low": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_yes": 18,
+    "pos_no": 10
+   },
+   "gpt-5-nano low anchor_evs": {
+    "neg": 52,
+    "neg_no": 52,
+    "pos": 28,
+    "pos_no": 24,
+    "pos_yes": 4
+   }
+  },
+  "0.2-0.4": {
+   "nano_low": {
+    "neg": 274,
+    "neg_no": 274,
+    "pos": 108,
+    "pos_no": 76,
+    "pos_yes": 32
+   },
+   "Luna_low": {
+    "neg": 274,
+    "neg_no": 271,
+    "pos": 108,
+    "pos_yes": 82,
+    "pos_no": 26,
+    "neg_yes": 3
+   },
+   "gpt-5-nano low anchor_evs": {
+    "neg": 274,
+    "neg_no": 273,
+    "pos": 108,
+    "pos_no": 87,
+    "pos_yes": 21,
+    "neg_yes": 1
+   }
+  },
+  "0.4-0.6": {
+   "nano_low": {
+    "neg": 265,
+    "neg_no": 264,
+    "pos": 122,
+    "pos_no": 82,
+    "pos_yes": 40,
+    "neg_yes": 1
+   },
+   "Luna_low": {
+    "neg": 265,
+    "neg_no": 256,
+    "pos": 122,
+    "pos_no": 29,
+    "pos_yes": 93,
+    "neg_yes": 9
+   },
+   "gpt-5-nano low anchor_evs": {
+    "neg": 265,
+    "neg_no": 265,
+    "pos": 122,
+    "pos_no": 102,
+    "pos_yes": 20
+   }
+  },
+  "0.6-0.8": {
+   "nano_low": {
+    "pos": 88,
+    "pos_no": 47,
+    "neg": 122,
+    "neg_no": 119,
+    "pos_yes": 41,
+    "neg_yes": 3
+   },
+   "Luna_low": {
+    "pos": 88,
+    "pos_no": 16,
+    "neg": 122,
+    "neg_no": 116,
+    "pos_yes": 72,
+    "neg_yes": 6
+   },
+   "gpt-5-nano low anchor_evs": {
+    "pos": 88,
+    "pos_no": 64,
+    "neg": 122,
+    "neg_no": 122,
+    "pos_yes": 24
+   }
+  },
+  "0.8-1.01": {
+   "nano_low": {
+    "pos": 69,
+    "pos_no": 36,
+    "neg": 14,
+    "neg_yes": 2,
+    "pos_yes": 33,
+    "neg_no": 12
+   },
+   "Luna_low": {
+    "pos": 69,
+    "pos_yes": 66,
+    "neg": 14,
+    "neg_yes": 4,
+    "neg_no": 10,
+    "pos_no": 3
+   },
+   "gpt-5-nano low anchor_evs": {
+    "pos": 69,
+    "pos_no": 38,
+    "neg": 14,
+    "neg_no": 13,
+    "pos_yes": 31,
+    "neg_yes": 1
+   }
+  }
+ },
+ "cost_list": 0.47827680000000006,
+ "usage": [
+  3225760,
+  792472,
+  1128
+ ]
+}
