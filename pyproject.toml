@@ -1,7 +1,7 @@
 [project]
 name = "blueprint-er"
 version = "1.0.0"
-description = "Blueprint: privacy-preserving entity resolution with large language models (code, datasets and run records)."
+description = "Blueprint: pseudonymized entity resolution with large language models (code, datasets and run records)."
 requires-python = ">=3.9"
 dependencies = [
     "openai>=2.0",

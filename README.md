@@ -1,6 +1,6 @@
-# Blueprint: privacy-preserving entity resolution with large language models
+# Blueprint: pseudonymized entity resolution with large language models
 
-Code, datasets and run records for the paper *Privacy-preserving entity resolution with large
+Code, datasets and run records for the paper *Pseudonymized entity resolution with large
 language models* (Z. Tang and M. Kejriwal).
 
 Blueprint separates the design of a resolution from its execution. A hosted model (the design
@@ -149,5 +149,5 @@ its source; `LICENSE-DATA.md` lists what is and is not covered.
 
 ## Citation
 
-Z. Tang and M. Kejriwal. Privacy-preserving entity resolution with large language models.
+Z. Tang and M. Kejriwal. Pseudonymized entity resolution with large language models.
 Manuscript, 2026.
